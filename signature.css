@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+a {
+    color: #916128;
+    text-decoration: none;
+}
+input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px;
+    margin: 6px 0;
+    font-size: 14px;
+}
+.signature {
+    color: #333;
+    float: left;
+}
+.name {
+    font-weight: bold;
+}
+.title {
+    font-style: italic;
+    font-size: 0.8em;
+}
+.phone {
+    margin-top: 6px;
+}
+.icon {
+    color: #916128;
+    font-weight: bold;
+}
+.company-details {
+    font-size: 0.7em;
+}
+.company-details div:first-child {
+    font-weight: bold;
+}
+.company-details a {
+    font-size: 0.9rem;
+}

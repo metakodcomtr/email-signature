@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Email Signature Result</title>
+        <link rel="stylesheet" href="signature.css" />
+    </head>
+    <body>
+        <div class="signature">
+            <div>
+                <div class="name" id="name">JOHN DOE</div>
+                <div class="title" id="title">FOUNDER/CEO</div>
+                <div class="phone">
+                    <span class="icon">✆</span>
+                    <span id="phone"><a href="tel:+1 (555) 555-5555">+1 (555) 555-5555</a></span>
+                </div>
+                <div class="email">
+                    <span class="icon">✉</span>
+                    <span id="email"><a href="mailto:john@doe.com">john@doe.com</a></span>
+                </div>
+            </div>
+            <div>
+                <img src="metakod.svg" width="220" />
+                <div class="company-details">
+                    <div>METAKOD İŞ YÖNETİM YAZILIMLARI LTD. ŞTİ.</div>
+                    <div>OSTİM OSB MAH. CEVAT DÜNDAR CAD. 15/24</div>
+                    <div>YENİMAHALLE / ANKARA</div>
+                    <div>OSTİM V.D. 619 115 5877</div>
+                    <a href="https://metakod.com.tr">metakod.com.tr</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            const title = urlParams.get('title');
+            const phone = urlParams.get('phone');
+            const email = urlParams.get('email');
+
+            document.getElementById('name').innerHTML = name;
+            document.getElementById('title').innerHTML = title;
+            document.getElementById('phone').innerHTML = '';
+            document.getElementById('email').innerHTML = '';
+
+            const phoneLink = document.createElement('a');
+            phoneLink.href = 'tel:' + phone;
+            phoneLink.innerHTML = phone;
+            document.getElementById('phone').appendChild(phoneLink);
+
+            const emailLink = document.createElement('a');
+            emailLink.href = 'mailto:' + email;
+            emailLink.innerHTML = email;
+            document.getElementById('email').appendChild(emailLink);
+        </script>
+    </body>
+</html>
